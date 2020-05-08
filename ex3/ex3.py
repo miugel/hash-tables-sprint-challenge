@@ -1,9 +1,18 @@
 def intersection(arrays):
+    hash_table = {}
+    result = []
 
-    """
-    YOUR CODE HERE
-    """
+    for i in arrays:
+        for j in i:
+            if j in hash_table:
+                hash_table[j] += 1
+            else:
+                hash_table[j] = 1
 
+            if hash_table[j] == len(arrays):
+                result.append(j)
+
+    # print(result)
     return result
 
 
